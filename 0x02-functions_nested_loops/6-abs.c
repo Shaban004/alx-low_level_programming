@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * int _abs - Ptints the absolute val on an int
- * @n: It's the int to be checked
- * Rturn: Absolute val pf a number or zero
+ * _abs - Prints the absolute val on an int
+ * @c: It's the int to be checked
+ * Return: Absolute val pf a number or zero
  */
 int _abs(int c)
 {
