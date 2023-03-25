@@ -2,7 +2,7 @@
 /**
  * main -prints _putchar
  * is written by mbah
- * Return 0
+ * Return: Always 0 on success
  */
 
 int main(void)
