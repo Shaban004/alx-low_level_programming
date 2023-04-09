@@ -1,26 +1,27 @@
-#include "holberton.h"
+#include "main.h"
+int actual_prime(int n, int i);
 /**
- * is_prime_number - func that returns 1 if a num is a prime num, 0 otherwise
- * @n: number for input
- * Return: 0
+ * is_prime_number - says if an integer is a prime number or not
+ * @n: number to evaluate
+ * Return: 1 if n is a prime number, 0 if not
  */
 int is_prime_number(int n)
 {
-return (helper_prime(n, 2, n / 2));
+if (n <= 1)
+return (0);
+return (actual_prime(n, n - 1));
 }
 /**
- * helper_prime - blank
- * @n: checkl
- * @i: for the increment
- * @limit: stop
- * Return: 0
+ * actual_prime - calculates if a number is prime recursively
+ * @n: number to evaluate
+ * @i: iterator
+ * Return: 1 if n is prime, 0 if not
  */
-int helper_prime(int n, int i, int limit)
+int actual_prime(int n, int i)
 {
-if ((n % i == 0 && i <= limit) || n < 0 || n == 1)
-return (0);
-else if (n % i != 0 && i <= limit)
-return (helper_prime(n, i + 1, limit));
-else
+if (i == 1)
 return (1);
+if (n % i == 0 && i > 0)
+return (0);
+return (actual_prime(n, i - 1));
 }
